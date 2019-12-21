@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>
+        Voters
+    </title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <header>
+        <h3>
+            Election<sub>2019</sub>
+        </h3>
+        <h1>
+            <!--Welcome To Voter's Club!!!-->
+        </h1>
+    </header>
+    <div class="wrapper">
+        <p class="par-text">
+            Confirm If You're Eligible To Vote
+        </p>
+        <hr>
+
+        <p>
+            <form action="#" onsubmit="myFunction()">
+                <p class="form-text">
+                    User:<br/> <input type="text" placeholder="enter your name" class="input-type" required/><br/><br/> Occupation:
+                    <br/><input type="text" placeholder="enter your occupation" class="input-type" required/><br/><br/> Status:
+                    <br/><input type="text" placeholder="Single/Married" class="input-type" required/><br/><br/> Input your
+                    age:
+                    <br/><input id="age" class="input-type" type="number" required/>
+                    <span id="ageAlert"></span>
+                    <button type="submit" class="btn">Confirm</button>
+
+                </p>
+
+            </form>
+        </p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var age, voteable;
+            age = document.getElementById("age").value;
+            voteable = (age < 18) ? "Sorry, you are not allowed" : "Congratulations You are old enough";
+            document.getElementById('ageAlert').innerHTML = '';
+
+            alert(voteable + " to vote!!!");
+        }
+    </script>
+</body>
+
+
+
+</html>
